@@ -35,7 +35,7 @@ easy_apply = driver.find_element(By.XPATH, "/html/body/div[6]/div[3]/div[4]/sect
                                            "3]/div/button")
 easy_apply.click()
 time.sleep(5)
-job_area = driver.find_elements(By.CSS_SELECTOR, ".job-card-container--clickable")
+job_area = driver.find_elements(By.CLASS_NAME, "jobs-search-results__list-item")
 for job in job_area:
     job.click()
     time.sleep(1)
