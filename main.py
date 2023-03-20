@@ -1,7 +1,12 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver.common.by import By
+
+# LinkedIn Login details
+username = os.environ["USERNAME"]
+password = os.environ["PASSWORD"]
 
 # Selenium driver setup
 service = Service("C:/Program Files (x86)/Google/Chrome/chromedriver.exe")
