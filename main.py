@@ -30,3 +30,16 @@ password_field.send_keys(password)
 password_field.send_keys(Keys.ENTER)
 time.sleep(5)
 
+# Save relevant jobs
+easy_apply = driver.find_element(By.XPATH, "/html/body/div[6]/div[3]/div[4]/section/div/section/div/div/div/ul/li["
+                                           "3]/div/button")
+easy_apply.click()
+time.sleep(5)
+job_area = driver.find_elements(By.CSS_SELECTOR, ".job-card-container--clickable")
+for job in job_area:
+    job.click()
+    time.sleep(1)
+    save_button = driver.find_element(By.CLASS_NAME, "jobs-save-button")
+    save_button.click()
+    time.sleep(1)
+    print("Job saved")
