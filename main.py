@@ -28,7 +28,7 @@ password_field = driver.find_element(By.CSS_SELECTOR, "#password")
 password_field.click()
 password_field.send_keys(password)
 password_field.send_keys(Keys.ENTER)
-time.sleep(5)
+time.sleep(15)
 
 # Save relevant jobs
 easy_apply = driver.find_element(By.XPATH, "/html/body/div[6]/div[3]/div[4]/section/div/section/div/div/div/ul/li["
@@ -43,3 +43,5 @@ for job in job_area:
     save_button.click()
     time.sleep(1)
     print("Job saved")
+    popup = driver.find_element(By.CLASS_NAME, "artdeco-toast-item__dismiss")
+    popup.click()
